@@ -1,0 +1,94 @@
+baseURL = "https://example.com"
+title = "The Sensual Sync"
+author = "KingSnow"
+languageCode = "en"
+DefaultContentLanguage = "en"
+enableInlineShortcodes = true
+theme = "tella"
+enableRobotsTXT = true
+
+# Please enable this feature if the site is available in Japanese, Chinese or Korean.
+#hasCJKLanguage = true
+
+# If you're using Google Analytics, you can enable this feature.
+#googleAnalytics = "UA-12345678-1"
+
+# Disqus Comment System
+#disqusShortname = ""
+[markup]
+[markup.goldmark.parser.attribute]
+        block = true
+        title = true
+    [markup.goldmark.renderHooks]
+      [markup.goldmark.renderHooks.image]
+        enableDefault = false
+      [markup.goldmark.renderHooks.link]
+        enableDefault = false
+    [markup.goldmark.renderer]
+      hardWraps = false
+      unsafe = false
+      xhtml = false
+[params]
+
+  showBlog = false
+  mainSections = ['blog']
+
+  googleFonts = true
+
+  [params.logo]
+    main = "/img/sensualsynclogo.png"
+    alt = "SS Logo"
+
+    # The size parameter is the class name of tailwindcss
+    # https://tailwindcss.com/
+    size = "h-14"
+
+  [params.site]
+    name = "The Sensual Sync"
+
+  [params.icon]
+    #If you want to use FontAwesome, set this parameter to true.
+    fontawesome = true
+
+  [params.homepage_meta_tags]
+    meta_description = "Discover Sensual Sync, the revolutionary wearable technology that enhances intimacy by allowing couples to share sensations in real-time."
+    meta_og_title = "Sensual Sync - Revolutionizing Intimacy"
+    meta_og_type = "website"
+    meta_og_url = "https://sensualsync.example.com"
+    meta_og_image = "https://sensualsync.example.com/images/sensualsynclogo.png"
+    meta_og_description = "Sensual Sync offers cutting-edge wearable devices that bring couples closer by sharing sensations in real-time, no matter the distance."
+    meta_twitter_card = "summary_large_image"
+    meta_twitter_site = "@sensualsync"
+    meta_twitter_creator = "@sensualsync"
+
+[menu]
+
+  [[menu.main]]
+    identifier = "sync"
+    name = "Sensual Sync"
+    url = "/sync"
+    weight = 1
+
+  [[menu.main]]
+    identifier = "About"
+    name = "About"
+    url = "/about"
+    weight = 2
+
+  [[menu.main]]
+    identifier = "contact"
+    name = "Contact"
+    url = "/contact/"
+    weight = 4
+
+  # Footer Menu
+  [[menu.footer]]
+    name = "Home"
+    url = "/"
+      weight = 1
+
+  [[menu.footer]]
+    name = "Github"
+    url = "https://github.com/opera7133/tella"
+    pre = "<i class='icon-github text-2xl'></i>"
+      weight = 2
